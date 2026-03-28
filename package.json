@@ -5,7 +5,8 @@
   "description": "MCP actions for the Backstage tech-insights plugin. Exposes tech-insights checks, facts, and entity insights as MCP tools.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/surajnarwade/tech-insights-mcp-actions-backend"
+    "url": "https://github.com/surajnarwade/tech-insights-mcp-actions-backend",
+    "directory": "."
   },
   "bugs": {
     "url": "https://github.com/surajnarwade/tech-insights-mcp-actions-backend/issues"
@@ -18,8 +19,8 @@
     "tech-insights",
     "model-context-protocol"
   ],
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "dist/index.cjs.js",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public",
     "main": "dist/index.cjs.js",
@@ -27,7 +28,13 @@
   },
   "backstage": {
     "role": "backend-plugin",
-    "pluginId": "tech-insights-mcp-actions"
+    "pluginId": "tech-insights-mcp-actions",
+    "pluginPackages": [
+      "@surajnarwade/plugin-tech-insights-mcp-actions-backend"
+    ],
+    "features": {
+      ".": "@backstage/BackendFeature"
+    }
   },
   "scripts": {
     "start": "backstage-cli package start",
@@ -54,5 +61,12 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "typesVersions": {
+    "*": {
+      "package.json": [
+        "package.json"
+      ]
+    }
+  }
 }
