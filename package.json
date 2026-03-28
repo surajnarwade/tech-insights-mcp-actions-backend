@@ -33,7 +33,7 @@
     "start": "backstage-cli package start",
     "build": "backstage-cli package build",
     "lint": "backstage-cli package lint",
-    "test": "backstage-cli package test",
+    "test": "backstage-cli package test -- --watchman=false",
     "clean": "backstage-cli package clean",
     "prepack": "backstage-cli package prepack",
     "postpack": "backstage-cli package postpack"
@@ -46,7 +46,11 @@
   },
   "devDependencies": {
     "@backstage/cli": "^0.36.0",
-    "@types/lodash": "^4.17.0"
+    "@backstage/cli-defaults": "^0.1.0",
+    "@types/jest": "^29.5.14",
+    "@types/lodash": "^4.17.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
   },
   "files": [
     "dist"

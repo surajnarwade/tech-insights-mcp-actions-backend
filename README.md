@@ -1,6 +1,6 @@
 # tech-insights-mcp-actions-backend
 
-Exposes [Backstage Tech Insights](https://backstage.io/docs/features/tech-insights/) as MCP (Model Context Protocol) actions, so AI assistants can query checks, facts, scorecards, and maturity ranks for your entities.
+Exposes [Backstage Tech Insights](https://github.com/backstage/community-plugins/tree/main/workspaces/tech-insights) as MCP (Model Context Protocol) actions, so AI assistants can query checks, facts, scorecards, and maturity ranks for your entities.
 
 ## Prerequisites
 

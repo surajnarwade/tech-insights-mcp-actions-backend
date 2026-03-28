@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Generate type declarations
+        run: yarn tsc
+
       - name: Build
         run: yarn build
 
